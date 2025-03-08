@@ -1,0 +1,40 @@
+{
+    "institutes": [
+        {
+            "id": 1,
+            "name": "University of Bath",
+            "logo": "assets/logos/uob.png",
+            "place": "Bath, United Kingdom",
+            "degree": "MSc Artificial Intelligence",
+            "description": "Distance Learning, part-time taught master focused solely on Artificial Intelligence. \\n Topics include: Programming for AI, Mathematics for AI, the Foundations of AI (core concepts and ideologies), Applications of AI (in society and firms), bridge between humans and intelligent machines, Natural Language Processing, AI Systems Engineering, formal understanding of AI (computationally and under research), Deep Learning, Reinforcement Learning, Robotics and Machine Vision. \\n Currently undergoing dissertation. Flexibility in having it completed quicker at full-time pace, or longer at part-time pace.",
+            "date": "2022-2025"
+        },
+        {
+            "id": 2,
+            "name": "Delft University of Technology",
+            "logo": "assets/logos/tud.png",
+            "place": "Delft, Netherlands",
+            "degree": "MSc Computer Science",
+            "description": "Full-time degree, specialising in Artificial Intelligence Technology \\n A research master focused on AI. Completed courses include: AI Techniques, Machine Learning 1, Machine Learning 2, Deep Learning, Data Visualisation, as well as a research project for Social Signal Processing.",
+            "date": "2021-hold"
+        },
+        {
+            "id": 3,
+            "name": "Vrije Universiteit Amsterdam",
+            "logo": "assets/logos/vu.png",
+            "place": "Amsterdam, Netherlands",
+            "degree": "BSc Computer Science",
+            "description": "Concluded with a minor in Data Science; involved data pre-processing, wrangling, analysis and privacy (GDPR etc.). Also included Information Retrieval techniques, and Strategic Management of Technological Innovation for firms and society. \n Bachelor Thesis was an MSc level project in the field of Machine Learning. Involved creating a Variational Autoencoder with Transformer architecture from scratch. Transformed the model from NLP to a financial data setting, and visualised the latent-space to analyse any patterns in financial market data.",
+            "date": "2018-2021"
+        },
+        {
+            "id": 4,
+            "name": "Elkanah House",
+            "logo": "assets/logos/elkanah.png",
+            "place": "Cape Town, South Africa",
+            "degree": "High School Diploma",
+            "description": "https://www.elkanah.co.za",
+            "date": "2017"
+        }
+    ]
+}

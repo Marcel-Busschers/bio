@@ -1,0 +1,22 @@
+{
+    "companies": [
+        {
+            "id": 1,
+            "name": "Outlier AI",
+            "logo": "assets/logos/outlier.png",
+            "place": "San Francisco, U.S. (remote)",
+            "title": "AI Model Trainer",
+            "description": "Training AI models via participating in response tweaking/correcting, data adaptation, hyperparameter tuning, etc.",
+            "date": "November 2024 - present"
+        },
+        {
+            "id": 2,
+            "name": "Visionary Trades Group",
+            "logo": "assets/logos/vt.png",
+            "place": "Cape Town, South Africa",
+            "title": "FX Trader",
+            "description": "A start up trading company based in Cape Town, South Africa. This was a small po-sition filled directly after high school, before moving to Amsterdam to study. Involved analysing markets and posting tips to alert-feeds for subscribers. Had to show proficiency in analysing certain markets based on percentage yields made with company funds.",
+            "date": "Jan - Jul 2018"
+        }
+    ]
+}

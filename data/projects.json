@@ -1,0 +1,20 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Watch Any Stream",
+            "type": "App",
+            "overview": "iOS app that allows user to find a streaming service where a title may be available on, accross hundreds of countries simultaneously.",
+            "description": "This app was created to replicate the functionality of watchany.stream; a website that allows you to find which streaming service a title may be available on, accross hundres of countries. It uses an API from The Movie Database (TMDb) to pull relevant titles such as Trending content, Popular content, and Categorical content. \\n It has certain functionalities to allow for a more user-friendly and familiar design, including the Netflix-like horizontal scrolling, and search functionality. Furthermore, a section where the user can select which streaming services they own to filter out all the irrelivant providers. \\n Upon entering a title, the user is provided with basic information including the title, date of air, description, rating and popularity count. It then provides a selection of providers that this particular title may be available on; the user can then select a provider, which will present the user with a list of countries which can be connected to via any common VPN service. \\n Note: this app is for personal use, and is not published to the App Store.",
+            "dependencies": "iOS, xCode, Swift, SwiftUI, APIs, Web Scraping, Concurrency",
+            "preview": "assets/photos/watchanystream/splash.png",
+            "images": [
+                "assets/photos/watchanystream/home.png",
+                "assets/photos/watchanystream/search.png",
+                "assets/photos/watchanystream/content.png",
+                "assets/photos/watchanystream/provider.png",
+                "assets/photos/watchanystream/provider_selection.png"
+            ]
+        }
+    ]
+}

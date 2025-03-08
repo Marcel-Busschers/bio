@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Courses | Marcél Busschers</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <style>
+        /* === Shared Styles === */
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --radius: 16px;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--text-color);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* === Course Page Specific Styles === */
+        .courses-container {
+            max-width: 1200px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .institute-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .study-guide-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .study-guide-button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .course-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .course-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .course-code {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .course-description {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* === Dark Mode === */
+        .dark-mode {
+            --card-bg: #334155;
+            --text-color: #f8fafc;
+            background: var(--dark);
+        }
+
+        .dark-mode .navbar {
+            background: rgba(30, 41, 59, 0.98);
+        }
+
+        .dark-mode .course-description {
+            color: #94a3b8;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .course-link {
+            display: block;
+            margin-top: 1rem;
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .dark-mode .online-guide-button {
+            background: var(--secondary);
+            color: var(--text-dark);
+        }
+
+        /* === Course Card Updates === */
+        .course-card {
+            position: relative;
+            text-decoration: none !important; /* Remove underline */
+        }
+
+        .online-guide-button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .online-guide-button:hover {
+            transform: translateY(-2px);
+        }
+        /* Remove underline from course links */
+        .course-main-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        /* Course card positioning */
+        .course-card {
+            position: relative;
+            padding-bottom: 2.5rem; /* Space for button */
+        }
+
+        .online-guide-button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .online-guide-button:hover {
+            transform: translateY(-2px);
+            background: var(--secondary);
+        }
+
+        /* Dark mode adjustments */
+        .dark-mode .online-guide-button {
+            background: var(--primary);
+        }
+        .dark-mode .online-guide-button:hover {
+            background: var(--secondary);
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Course Content -->
+    <main class="courses-container">
+        <div class="institute-header">
+            <h1 id="instituteName">University Courses</h1>
+            <a id="studyGuideLink" class="study-guide-button" target="_blank">Study Guide</a>
+        </div>
+        <p id="overview" class="course-description"></p>
+        <div class="course-grid" id="courseList"></div>
+    </main>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle">🌓</button>
+
+    <script>
+        // Get Institute ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const instituteId = urlParams.get('institute');
+
+        // Dark Mode Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', 
+                document.body.classList.contains('dark-mode') ? 'dark' : 'light'
+            );
+        });
+
+        // Updated loadCourses function
+        async function loadCourses() {
+            try {
+                const [educationRes, coursesRes] = await Promise.all([
+                    fetch('data/education.json'),
+                    fetch('data/university_courses.json')
+                ]);
+
+                if (!educationRes.ok || !coursesRes.ok) throw new Error('Failed to load data');
+
+                const educationData = await educationRes.json();
+                const coursesData = await coursesRes.json();
+
+                // Find matching university and courses
+                const university = educationData.institutes.find(i => i.id == instituteId);
+                const universityCourses = coursesData.universities.find(u => u.university_id == instituteId);
+
+                // Update page content
+                document.getElementById('instituteName').textContent = university.name;
+                document.getElementById('overview').textContent = universityCourses.overview || '';
+                
+                // Set study guide links
+                const studyGuideLink = document.getElementById('studyGuideLink');
+                studyGuideLink.href = universityCourses.study_guide_link || '#';
+                studyGuideLink.style.display = universityCourses.study_guide_link ? 'block' : 'none';
+
+                // Populate courses
+                const courseGrid = document.getElementById('courseList');
+                courseGrid.innerHTML = universityCourses.courses.map(course => `
+                    <div class="course-card">
+                        <a href="${universityCourses.study_guide_path}#page=${course.study_guide_page}" 
+                        target="_blank"
+                        class="course-main-link">
+                            <div class="course-code">${course.code}</div>
+                            <h2 class="course-title">${course.name}</h2>
+                            <p class="course-description">${course.description}</p>
+                        </a>
+                        ${course.link ? `
+                            <a href="${course.link}" 
+                            class="online-guide-button" 
+                            target="_blank">
+                            🌍
+                            </a>
+                        ` : ''}
+                    </div>
+                `).join('');
+
+            } catch (error) {
+                console.error('Error loading course data:', error);
+                document.getElementById('courseList').innerHTML = `
+                    <div class="error-message">
+                        <h3>Error Loading Course Data</h3>
+                        <p>Please try refreshing the page or check back later.</p>
+                    </div>
+                `;
+            }
+        }
+
+
+
+        // Initial load
+        if (instituteId) {
+            loadCourses();
+        } else {
+            document.getElementById('courseList').innerHTML = `
+                <div class="error-message">
+                    <h3>No Institute Selected</h3>
+                    <p>Please return to the <a href="education.html">education page</a> and select an institute.</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

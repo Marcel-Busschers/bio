@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Marcél Busschers</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <style>
+        /* === Shared Styles === */
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --radius: 16px;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--text-color);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Courses Page Specific Styles */
+        .courses-container {
+            max-width: 1200px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .course-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .course-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            text-decoration: none !important; /* Remove underline */
+            color: inherit; /* Inherit text color */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .course-service {
+            font-size: 1rem;
+            color: var(--accent);
+        }
+
+        .course-description {
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            --card-bg: #334155; /* Dark mode card background */
+            --text-color: #f8fafc; /* Dark mode text color */
+        }
+
+        .dark-mode .navbar {
+            background-color: rgba(30, 41, 59, 0.98);
+        }
+        
+        /* === Dark Mode Toggle Fix === */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* === Header Padding Fix === */
+        .courses-container h1 {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        /* === Full Dark Mode Fix === */
+        .dark-mode {
+            background: var(--dark);
+            color: var(--light);
+        }
+
+        .dark-mode .course-card {
+            background: #334155;
+        }
+
+        .dark-mode .course-service {
+            color: #94a3b8;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Courses Content -->
+    <main class="courses-container">
+        <h1>Professional Development Courses</h1>
+        <div class="course-grid" id="courseList"></div>
+    </main>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle">🌓</button>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Updated dark mode toggle handler
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Update card backgrounds explicitly
+            document.querySelectorAll('.course-card').forEach(card => {
+                card.style.backgroundColor = document.body.classList.contains('dark-mode') 
+                    ? '#334155' 
+                    : '#ffffff';
+            });
+            localStorage.setItem('theme', 
+                document.body.classList.contains('dark-mode') ? 'dark' : 'light'
+            );
+        });
+
+      // Load Course Data
+      async function loadCourses() {
+          try {
+              const response = await fetch('data/online_courses.json');
+              if (!response.ok) throw new Error('Failed to load data');
+
+              const data = await response.json();
+              let courses = [];
+
+              switch (data.show.toLowerCase()) {
+                  case 'all':
+                      courses = [...data.complete, ...data.incomplete];
+                      break;
+
+                  case 'complete':
+                      courses = data.complete; // Only completed
+                      break;
+
+                  case 'incomplete':
+                      courses = data.incomplete; // Only incomplete
+                      break;
+
+                  default:
+                      console.error('Invalid "show" value in JSON:', data.show);
+              }
+
+              const courseGrid = document.getElementById('courseList');
+              courseGrid.innerHTML = courses.map(course => `
+                  <a href="${course.path_or_link}" target="_blank" class="course-card">
+                      <h2 class="course-title">${course.name}</h2>
+                      <p class="course-service">Via ${course.service}</p>
+                      <p class="course-description">${course.description}</p>
+                  </a>
+              `).join('');
+          } catch (error) {
+              console.error('Error loading courses:', error);
+              document.getElementById('courseList').innerHTML = `
+                  <div class="error-message">
+                      <h3>Error Loading Courses</h3>
+                      <p>Please try refreshing the page or check back later.</p>
+                  </div>
+              `;
+          }
+      }
+
+      // Initial load
+      loadCourses();
+    </script>
+</body>
+</html>
