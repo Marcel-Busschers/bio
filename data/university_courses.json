@@ -3,7 +3,7 @@
         {
             "university_id": 3,
             "overview": "",
-            "study_guide_path": "assets/study_guides/VU.pdf",
+            "study_guide_path": "assets/study_guides/vu.pdf",
             "study_guide_link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science#/tab=2",
             "courses": [
                 {
@@ -214,7 +214,7 @@
         {
             "university_id": 2,
             "overview": "This degree could not come to completion for financial reasons. These are the completed courses.",
-            "study_guide_path": "assets/study_guides/TUD.pdf",
+            "study_guide_path": "assets/study_guides/tud.pdf",
             "study_guide_link": "https://studiegids.tudelft.nl/a101_displayProgram.do?program_tree_id=26493",
             "courses": [
                 {
@@ -264,7 +264,7 @@
         {
             "university_id": 1,
             "overview": "This degree is currently months away from completion. Currently doing my dissertation/thesis at a part-time pace.",
-            "study_guide_path": "assets/study_guides/UOB.pdf",
+            "study_guide_path": "assets/study_guides/uob.pdf",
             "study_guide_link": "https://online.bath.ac.uk/online-courses/msc-artificial-intelligence/curriculum",
             "courses": [
                 {
