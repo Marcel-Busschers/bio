@@ -1,0 +1,364 @@
+{
+    "universities": [
+        {
+            "university_id": 3,
+            "overview": "",
+            "study_guide_path": "assets/study_guides/VU.pdf",
+            "study_guide_link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science#/tab=2",
+            "courses": [
+                {
+                    "name": "Computational Thinking",
+                    "code": "X_400475",
+                    "description": "This course develops problem-solving skills through algorithmic strategies like modeling, search/sort algorithms, and graph methods, emphasizing creative approaches to translate solutions into flowcharts and code. Students apply these techniques in group projects with peer presentations and reports, assessed via practical assignments (45%), a project (35%), and weekly quizzes (20%).",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_400475#/",
+                    "study_guide_page": 43
+                },
+                {
+                    "name": "Computer Programming",
+                    "code": "XB_40011",
+                    "description": "This course teaches foundational C++ programming concepts including data types, control structures, functions, recursion, classes, and memory management. Students apply skills through practical coding assignments (40% of grade) and a written exam (60%), with bonus points for early e-book exercise completion.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/XB_40011#/",
+                    "study_guide_page": 46
+                },
+                {
+                    "name": "Introduction to Computer Science",
+                    "code": "X_401087",
+                    "description": "This introductory course combines lectures on modern computer science concepts with hands-on tutorials in essential tools like Linux, Git, and shell scripting. Students develop academic skills through group projects involving scientific article analysis/presentations and reflective mentor sessions, assessed through active participation and mandatory attendance. It provides foundational CS knowledge and practical competencies for subsequent studies via a pass/fail grading system.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_401087#/",
+                    "study_guide_page": 104
+                },
+                {
+                    "name": "Physical Computing (now called Pervasive Computing)",
+                    "code": "XB_40008",
+                    "description": "This course introduces pervasive computing systems using sensors, machine learning, and actuators to design context-aware solutions like fall detection or navigation aids. Students build microcontroller-based prototypes through hands-on MATLAB/C++ programming, while addressing technical and ethical challenges in team projects assessed via practical assignments (50%) and exams (50%).",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/XB_40008#/",
+                    "study_guide_page": 141
+                },
+                {
+                    "name": "Systems Architecture (now called Computer Organization)",
+                    "code": "XB_40009",
+                    "description": "Matching the requirements of the IEEE/ACM CS Curriculum, topics for this course include: the architecture, the structure, the operation and the interconnection of computer components into computer systems, including modern architectures, data representation, assembler programming, virtual machines, the structure of translators, compiling and loading, basic operating systems concepts (I/O, interrupt handling, process).",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/XB_40009#/",
+                    "study_guide_page": 45
+                },
+                {
+                    "name": "Web Technology",
+                    "code": "X_400488",
+                    "description": "This course teaches foundational web technologies including HTML, CSS, JavaScript, and HTTP proto-cols, with hands-on practice in creating validated web content, RESTful APIs, and accessibility-compliant designs. Students develop skills through group assignments (60% of grade) and an exam (30%), focusing on client-server architecture, device independence, and technical report writing to evaluate web projects.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_400488#/",
+                    "study_guide_page": 179
+                },
+                {
+                    "name": "Computer Networks",
+                    "code": "X_400487",
+                    "description": "This course covers fundamental computer networking concepts including layered architectures (TCP/IP stack), data transmission protocols (TCP, UDP, Ethernet, WiFi), error/flow control, routing algorithms, and performance/scalability analysis. Students apply these principles through practical socket programming assignments while exploring network design challenges like multiplexing, addressing, and Quality of Service requirements across wired/wireless systems.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_400487#/",
+                    "study_guide_page": 44
+                },
+                {
+                    "name": "Logic and Sets",
+                    "code": "X_401090",
+                    "description": "This course covers mathematical foundations in set theory—including relations, functions, and induction and formal logic systems like propositional/predicate logic, focusing on truth tables, normal forms, and applications such as logic circuits and OBDDs. Students develop skills to model logical statements, analyze relation properties, and construct proofs through theoretical concepts and practical problem-solving exercises.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_401090#/",
+                    "study_guide_page": 121
+                },
+                {
+                    "name": "History of Science",
+                    "code": "X_400318",
+                    "description": "This course examines computing’s historical evolution through scientific, governmental, and economic lenses, using case studies to contextualize technological milestones within societal frameworks like Cold War dynamics and corporate innovation. Students analyse digital culture’s societal impacts while exploring how historical narratives shape modern computing roles, supplemented by assignments offering exam bonuses for critical engagement.",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_400318#/",
+                    "study_guide_page": 181
+                },
+                {
+                    "name": "Networks and Graphs",
+                    "code": "X_401010",
+                    "description": "This course teaches graph theory fundamentals—including graph types, properties, algorithms, and math-ematical proofs applied to real-world networks like the Internet, social communities, and disease spread. Students model networked systems, analyze metrics (clustering, diameter), and conduct experiments to understand phenomena such as data persistence and traffic routing, assessed through exams and manda-tory homework assignments.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_401010#/",
+                    "study_guide_page": 135
+                },
+                {
+                    "name": "Project Application Development (now called Computer Programming Project)",
+                    "code": "X_400556",
+                    "description": "This course focuses on developing large-scale programming skills by implementing an IJVM byte-code emulator in C, structured through incremental project phases. Students demonstrate proficiency in system-level programming through a practical assignment (100% of final grade) and pass/fail oral evalu-ation, requiring structured code development and testing against specifications.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_400556#/",
+                    "study_guide_page": 48
+                },
+                {
+                    "name": "Advanced Programming",
+                    "code": "X_400561",
+                    "description": "This course builds advanced object-oriented programming skills through concepts like inheritance, poly-morphism, generics, and abstract data types, emphasizing implementation of data structures (lists, binary search trees) and EBNF-based parsing. Practical assignments focus on applying theoretical knowledge to develop robust software solutions using Java features like iterators, exception handling, and API integra-tion (e.g., ArrayList).",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_400561#/",
+                    "study_guide_page": 182
+                },
+                {
+                    "name": "Data Structures & Algorithms",
+                    "code": "X_400614",
+                    "description": "This course covers fundamental data structures (stacks, queues, trees, graphs, hash tables) and core algorithm design paradigms like divide-and-conquer, dynamic programming, and greedy approaches. Students analyse algorithm efficiency through worst-case complexity and implement solutions in pseudocode for problems like sorting, string matching, and graph traversal.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_400614#/",
+                    "study_guide_page": 55
+                },
+                {
+                    "name": "Operating Systems",
+                    "code": "X_405067",
+                    "description": "This course explores modern operating system internals, covering design principles, process management, memory allocation, file systems, and concurrency through theoretical concepts and hands-on C programming using Linux/MINIX. It combines lectures with practical assignments (30% weight) and a written exam (70%) to assess both implementation skills and theoretical understanding of OS architectures.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_405067#/",
+                    "study_guide_page": 138
+                },
+                {
+                    "name": "Statistical Methods",
+                    "code": "X_401020",
+                    "description": "This course focuses on statistical methods for data analysis, covering probability theory, hypothesis test-ing, linear regression, and contingency tables. Students learn to summarize data, apply statistical tech-niques, interpret results, and create scientific reports through practical assignments and group work.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_401020#/",
+                    "study_guide_page": 162
+                },
+                {
+                    "name": "Intelligent Systems",
+                    "code": "X_401086",
+                    "description": "This course explores core AI methods including state-space search, adversarial algorithms, knowledge representation, and machine learning, with practical implementation of intelligent agents. Students develop systems for a complex card game challenge while examining ethical implications through group projects and theoretical exams.",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_401086#/",
+                    "study_guide_page": 183
+                },
+                {
+                    "name": "Linear Algebra",
+                    "code": "X_400649",
+                    "description": "This course focuses on core linear algebra concepts including linear systems, transformations, subspaces, eigenvalues, and orthogonality. Students learn to solve equations via row-reduction, compute matrix inverses/eigenvalues, diagonalize matrices, apply Gram-Schmidt orthogonalization, and address least-squares problems, assessed through a final written exam.",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_400649#/",
+                    "study_guide_page": 118
+                },
+                {
+                    "name": "Software Design",
+                    "code": "XB_40007",
+                    "description": "This course teaches systematic software design using object-oriented methodologies and UML modelling to solve recurring design problems, emphasizing pattern selection for robust, maintainable systems. Students apply concepts through team projects involving both modelling and implementation (70% of grade), complemented by a multiple-choice exam on UML and design principles (30%).",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/XB_40007#/",
+                    "study_guide_page": 159
+                },
+                {
+                    "name": "Databases",
+                    "code": "X_401008",
+                    "description": "This course focuses on relational database principles, teaching database design using Entity-Relationship diagrams, SQL implementation, normalization techniques, and integrity constraints like keys/foreign keys. It covers concurrency concepts including transaction management, lock-based control, and schema op-timization through functional dependencies, assessed via mandatory homework (with exam qualification) and a final written exam.",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_401008#/",
+                    "study_guide_page": 57
+                },
+                {
+                    "name": "Human-Computer Interaction",
+                    "code": "X_400432",
+                    "description": "This course teaches human-centered design processes, covering requirement analysis, prototyping (low/high-fidelity), and usability evaluation through lectures and practical sessions. Students develop in-teractive systems using methods like user needs assessments and conceptual modelling, assessed via group/individual assignments (60%) and an essay (40%).",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_400432#/",
+                    "study_guide_page": 95
+                },
+                {
+                    "name": "Introduction to Data Science",
+                    "code": "XB_0018",
+                    "description": "This course introduces data science fundamentals through key algorithms (regression, neural networks, clustering) and project phases, with hands-on Python implementation of techniques to prevent overfitting and visualize insights. Students tackle ethical data dilemmas, collaborate on group projects, and learn via lectures from academics/industry professionals, assessed through essays, a practical project, and exams.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/XB_0018#/",
+                    "study_guide_page": 105
+                },
+                {
+                    "name": "Data Wrangling",
+                    "code": "XB_0014",
+                    "description": "This course focuses on data preparation techniques including acquisition from diverse sources, cleaning/preprocessing, transformation for analytics, feature engineering, and visualization. Students apply these skills through practical assignments (30% grade) and a final presentation/report (70%) demonstrating end-to-end data wrangling for real-world applications.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/XB_0014#/",
+                    "study_guide_page": 56
+                },
+                {
+                    "name": "Strategic Management of Technology and Innovation",
+                    "code": "E_BK3_SMTI",
+                    "description": "This course explores strategic approaches to technology-driven innovation, covering innovation types, ecosystem dynamics, strategy development for project selection/collaboration, and organizational im-plementation of new products/services. Students analyse real-world cases and participate in simulation games to address managerial challenges in aligning innovation strategies with market demands and operational execution.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/E_BK3_SMTI#/",
+                    "study_guide_page": 163
+                },
+                {
+                    "name": "Data Analytics and Privacy",
+                    "code": "R_DAP",
+                    "description": "This course examines European privacy laws and data protection regulations like the GDPR, focusing on their role in governing data analytics practices and mitigating risks to fundamental rights such as autonomy and dignity. It explores the interplay between privacy (as an “opacity instrument”) and data protection (as a “transparency tool”), equipping students to analyse legal compliance in data-driven technologies through interdisciplinary case studies.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/R_DAP#/",
+                    "study_guide_page": 53
+                },
+                {
+                    "name": "Information Retrieval",
+                    "code": "X_400435",
+                    "description": "This course covers search engine fundamentals and information retrieval systems, teaching indexing methods, Boolean retrieval, vector space models, web crawling, and algorithms like PageRank for rank-ing/clustering. Students implement retrieval components in Python through practical assignments while learning theoretical principles assessed via a multiple-choice exam.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_400435#/",
+                    "study_guide_page": 99
+                },
+                {
+                    "name": "Machine Learning",
+                    "code": "X_400154",
+                    "description": "This course covers fundamental machine learning methods including linear models, SVMs, decision trees, and neural networks, emphasizing theoretical foundations and statistical validation techniques. Students apply concepts through Python-based practical assignments (50% of grade) and a written exam (50%), focusing on real-world applications like image classification and data analysis.",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/X_400154#/",
+                    "study_guide_page": 123
+                },
+                {
+                    "name": "Automata and Complexity",
+                    "code": "X_401049",
+                    "description": "This course explores automata theory, formal languages, and computability, covering regular/context-free languages, finite/pushdown automata, and complexity classes (P, NP) while addressing fundamental questions about computational limits via concepts like Turing machines and undecidable problems (e.g., the halting problem). Students learn to analyse problem solvability, design automata/grammars, apply parsing algorithms, and reason about complexity through mandatory homework (70% threshold for exam eligibility) and a final exam determining the grade.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_401049#/",
+                    "study_guide_page": 24
+                },
+                {
+                    "name": "Philosophy and Ethics",
+                    "code": "X_400433",
+                    "description": "This course introduces foundational ethical theories—contractualism, utilitarianism, Kantian ethics, and theories of well-being to analyse moral dilemmas in emerging technologies like AI-driven surveillance, predictive algorithms, and automated decision systems. Students apply these frameworks to evaluate real-world cases through homework (50%) and a multiple-choice exam (50%), developing skills to justify ethical choices in tech design and governance.",
+                    "link": "https://studiegids.vu.nl/en/Bachelor/2020-2021/computer-science/X_400433#/",
+                    "study_guide_page": 142
+                },
+                {
+                    "name": "Bachelor Project Computer Science",
+                    "code": "XB_40001",
+                    "description": "This capstone project requires students to independently conduct computer science research—from formulating research questions and designing studies to implementing solutions (theoretical or practical) and critically evaluating outcomes. The final grade combines executed work (50%), thesis (40%), and presen-tation (10%), demonstrating comprehensive mastery of literature review, analysis, and scientific reporting skills developed throughout the bachelor’s program.",
+                    "link": "https://studiegids.vu.nl/en/courses/2020-2021/XB_40001#/",
+                    "study_guide_page": 25
+                }
+            ]
+        },
+        {
+            "university_id": 2,
+            "overview": "This degree could not come to completion for financial reasons. These are the completed courses.",
+            "study_guide_path": "assets/study_guides/TUD.pdf",
+            "study_guide_link": "https://studiegids.tudelft.nl/a101_displayProgram.do?program_tree_id=26493",
+            "courses": [
+                {
+                    "name": "Artificial Intelligence Techniques",
+                    "code": "IN4010(-12)",
+                    "description": "This course focuses on decision-theoretic AI techniques including probabilistic reasoning, Markov Decision Processes (MDPs), reinforcement learning, and multiagent systems for strategic decision-making. Students implement algorithms for complex problems like planning and machine learning through practical assignments in Java/Python, supported by theoretical foundations from Russell and Norvig’s Artificial Intelligence: A Modern Approach.",
+                    "link": "https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=57054",
+                    "study_guide_page": 31
+                },
+                {
+                    "name": "Conversational Agents",
+                    "code": "CS4270",
+                    "description": "This course explores conversational AI technologies like dialogue systems, NLP, and speech synthesis for developing chatbots and social robots applied in customer service, healthcare, and education. Students analyse human interaction patterns, implement agent behaviours using ML tools, and evaluate embodied systems’ effectiveness through group projects combining theory with practical design.",
+                    "link": "https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=57459",
+                    "study_guide_page": 27
+                },
+                {
+                    "name": "Deep Learning",
+                    "code": "CS4240",
+                    "description": "This course covers deep learning fundamentals including neural network architectures (CNNs, RNNs, transformers), optimization techniques, and unsupervised methods like GANs, with hands-on PyTorch implementation in lab assignments. Students critically analyze research papers through seminars and conduct reproducibility projects, applying methods to real-world problems while developing technical and scientific reporting skills.",
+                    "link": "https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=57391",
+                    "study_guide_page": 57
+                },
+                {
+                    "name": "Machine Learning 1",
+                    "code": "CS4220",
+                    "description": "This course covers core machine learning concepts including supervised/unsupervised learning, classification, regularization, support vector machines, Bayesian methods, clustering (EM algorithm), and feature engineering (PCA). Students implement algorithms through mathematical and programming lab exercises, building systems to solve learning problems while analysing technical literature. Assessment is based entirely on a final exam focusing on theoretical understanding and practical application of ML techniques.",
+                    "link": "https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=57370",
+                    "study_guide_page": 14
+                },
+                {
+                    "name": "Scientific Writing",
+                    "code": "WM-ITAV-4010",
+                    "description": "This course teaches scientific article writing through structured weekly assignments, guiding students in formulating research questions, managing literature, constructing arguments, and adhering to academic style conventions. Participants create either a research-based paper or literature review (3000 words) via peer feedback and iterative revisions, focusing on proper source integration and clear communication of results.",
+                    "link": "https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=57427",
+                    "study_guide_page": 38
+                },
+                {
+                    "name": "Seminar Social Signal Processing",
+                    "code": "CS4165",
+                    "description": "This course explores computational methods to analyse and simulate non-verbal social behaviours like eye contact, gestures, and emotional cues through interdisciplinary approaches combining psychology and machine learning. Students develop systems to detect or generate social signals (e.g., turn-taking in conversations) using techniques from computer vision, audio processing, and AI, while grounding projects in psychological theories. The curriculum includes lectures, paper analyses, and a collaborative research project designing applications for virtual agents or robots, assessed through proposals, implementations, and a final paper.",
+                    "link": "https://studiegids.tudelft.nl/a101_displayCourse.do?course_id=64364",
+                    "study_guide_page": 249
+                }
+            ]
+        },
+        {
+            "university_id": 1,
+            "overview": "This degree is currently months away from completion. Currently doing my dissertation/thesis at a part-time pace.",
+            "study_guide_path": "assets/study_guides/UOB.pdf",
+            "study_guide_link": "https://online.bath.ac.uk/online-courses/msc-artificial-intelligence/curriculum",
+            "courses": [
+                {
+                    "name": "Principles of Programming for Artificial Intelligence",
+                    "code": "CM500324",
+                    "description": "This unit introduces the principles of computer software development, including problem analysis, designing, implementation and evaluation. It explains the terminology and concepts of programming and teaches practical skills in reading and writing with the aim of producing programs to solve real-world problems.",
+                    "link": "",
+                    "study_guide_page": 3
+                },
+                {
+                    "name": "Mathematics for Artificial Intelligence",
+                    "code": "CM500325",
+                    "description": "This unit gives a concise but rigorous introduction to some of the key mathematical topics for artificial intelligence research and practice, with a focus on mathematical abstraction and formalisation, introducing students to the way that mathematics in research-level articles is written and thought about. Students will engage with cutting-edge AI research, seeing how the mathematical concepts and ideas they are introduced to are used in practice.",
+                    "link": "",
+                    "study_guide_page": 2
+                },
+                {
+                    "name": "Foundations of Artificial intelligence",
+                    "code": "CM800326",
+                    "description": "This unit gives a broad overview of some foundational topics in artificial intelligence, introducing some of the techniques that are used in this field. Students will implement theoretical knowledge in a practical way with programming exercises to accompany many of the algorithms discussed.",
+                    "link": "",
+                    "study_guide_page": 12
+                },
+                {
+                    "name": "Applications of Artificial Intelligence",
+                    "code": "CM500329",
+                    "description": "n this unit we will look at data science as an application of artificial intelligence. This will require understanding how low-level tools are used to manipulate data, from the manipulation of bits on your hard drive to the maths behind observations and analysis and the storing of data in databases and beyond. This unit will also require a high-level understanding of processes like how we deal with imperfect data, how the representation of data alters the story we are telling, and how we can ensure we follow our ethical and legal responsibilities.",
+                    "link": "",
+                    "study_guide_page": 1
+                },
+                {
+                    "name": "Humans and Intelligent Machines",
+                    "code": "CM500330",
+                    "description": "This course aims to give students an understanding of current theoretical methodological and practical research issues around human interaction with robots and other computational intelligence. Students will gain relevant knowledge and skills related to the design, implementation, evaluation, and management of systems involving humans and intelligent machines. This course will raise students' awareness of ethical and related challenges and constraints around the coexistence and collaboration of humans and intelligent machines. Participants will also gain experience in researching advanced topics in computer science, summarising the current state of the art, undertaking a relevant study, and presenting the results.",
+                    "link": "",
+                    "study_guide_page": 7
+                },
+                {
+                    "name": "Introduction to NLP",
+                    "code": "CM500328",
+                    "description": "This unit introduces a wide range of NLP techniques and applications from the most basic to the advanced. By the end of the unit, students will be taught both theoretical knowledge and practical skills in NLP, learn about the fundamental concepts and most popular tasks and implementation strategies, and be able to structure their own NLP projects in an end-to-end manner.",
+                    "link": "",
+                    "study_guide_page": 4
+                },
+                {
+                    "name": "Artificial Intelligence Systems Engineering",
+                    "code": "CM500327",
+                    "description": "AI Systems Engineering is an emerging field. This unit draws upon a range of perspectives published by multidisciplinary experts. The intention behind this unit is to expose students to different viewpoints of AI System Engineering from real world settings, to give context to what is traditionally a narrow academic focus of the subject. Content comes from a carefully curated set of sources that is intended to give a well-rounded view of the subject, as well as to guide students on how to synthesize literature to develop their understanding of the domain. This unit explores concepts for building applications and products with machine learning (ML). It is aimed at software engineers who want to understand the underlying concepts that must be considered when building robust and responsible systems which meet the specific challenges of working with AI-components and at data scientists who wish to understand the requirements of the ML-model for production use and want to simplify getting a prototype model into production. The unit considers all the steps required to turn an ML-model into a production system in a reliable and accountable manner.",
+                    "link": "",
+                    "study_guide_page": 5
+                },
+                {
+                    "name": "Further Artificial Intelligence",
+                    "code": "CM500331",
+                    "description": "This unit covers some of the advanced topics in artificial intelligence (AI). This is a continuation of the Foundations of AI unit, and students will learn a broad range of topics including fundamental concepts and recent advancements in the area. This unit is designed in a way that will allow them to gain theoretical knowledge as well as develop practical skills in the area.",
+                    "link": "",
+                    "study_guide_page": 9
+                },
+                {
+                    "name": "Foundations and Frontiers of Machine Learning",
+                    "code": "CM500335",
+                    "description": "Today, humans and machines generate an enormous amount of data that surpasses our capacity to absorb, interpret, and make complex decisions based on it. The future of complex decision-making lies in Artificial Intelligence (AI), which is the foundation of all computer learning. This course provides foundational understanding of deep learning techniques (multilayer perceptron, convolutional neural networks, etc.) as well as demonstrates how these models can solve complex problems in a variety of industries, from medical diagnostics to image recognition.",
+                    "link": "",
+                    "study_guide_page": 13
+                },
+                {
+                    "name": "Reinforcement Learning",
+                    "code": "CM500336",
+                    "description": "This unit provides a solid foundation in the exciting and fast-moving field of reinforcement learning. Reinforcement learning is concerned with training agents to select appropriate actions in their environments to achieve some goal. The types of problems tackled in reinforcement learning are very different from those tackled in other branches of machine learning. By the end of this unit, students should be able to identify sequential decision problems in the real world, formulate them as Markov decision processes, select appropriate solution methods, and implement them successfully. In the first half of the unit, students will cover the fundamentals of reinforcement learning. Starting from the very basics, students will build up fundamental concepts from first principles, before looking at key reinforcement learning algorithms and applying them to solve simple problems. In the second half of the unit, students will apply these key ideas to more complex problems using function approximation. At the very end of the unit, students will study some active areas of research on the cutting-edge of the field.",
+                    "link": "",
+                    "study_guide_page": 11
+                },
+                {
+                    "name": "Robotics and Machine Vision",
+                    "code": "CM500337",
+                    "description": "The Robotics and Machine Vision unit is a technical introduction to this application domain with a particular focus on perception systems. This unit covers key aspects of the pipeline such as raw data acquisition, processing and representation and interpretation. The main emphasis will be on the algorithms, yet the unit also touches on some hardware aspects of robotics, such as those involved in sensing and locomotion. With perception systems being the focus, and intensity camera the designated main sensor, the unit ventures into the domain of machine vision and graphics, covering important topics of scene reconstruction, modelling, and manipulation in 2D and 3D using projective geometry. Robotics as an area of research is given context, in terms of history of its development against the backdrop of generic AI evolution, as well as in terms of ethical practices, safety, and accountability. The unit also includes state-of-the-art robotics application examples where theory can be seen applied in the real world.",
+                    "link": "",
+                    "study_guide_page": 8
+                },
+                {
+                    "name": "Research Seminar and Project Preparation",
+                    "code": "CM500338",
+                    "description": "The aims of this unit are to prepare students for their dissertation research project, giving them an advanced level of understanding of what a research project is, what the various research themes are in the Department of Computer Science at the University of Bath, and how to find and critically evaluate relevant literature. Throughout this unit, students will develop a feasible project proposal that will lead to an effective dissertation. As part of their research proposal, students will need to start thinking about project methodologies and the ethical considerations needed for their project.",
+                    "link": "",
+                    "study_guide_page": 14
+                },
+                {
+                    "name": "Dissertation",
+                    "code": "CM500339",
+                    "description": "In this unit, students will follow an appropriate problem-solving route, building on the detailed dissertation project proposal written in the Research Project Preparation unit. They will analyse possible problem solutions based on an extensive literature and technological review of related research work and choose appropriate methods and approaches. This will lead to the implementation of the chosen solution, its testing, and its evaluation. In most cases the project will be a synthesis of both an analytical and a computational approach to solving or investigating a substantial computer science problem. However, projects will vary in style, and some may be more experimentally based while some may be purely theoretical. A comprehensive dissertation will be submitted at the completion of the project.",
+                    "link": "",
+                    "study_guide_page": 15
+                }
+            ]
+        }
+    ]
+}

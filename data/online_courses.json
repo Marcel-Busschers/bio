@@ -1,0 +1,103 @@
+{
+    "show": "all",
+    "complete": [
+        {
+            "name": "Data Structures & Algorithms in Java",
+            "service": "Udemy",
+            "service_link": "https://www.udemy.com",
+            "description": "This course provides a foundational understanding of data structures, covering essential concepts and practical implementations. The course focusses on arrays, linked lists, trees, graphs, and algorithm optimization techniques.",
+            "date": "June 2020",
+            "path_or_link": "assets/certificates/dsa.pdf"
+        },
+        {
+            "name": "MQL4",
+            "service": "Udemy",
+            "service_link": "https://www.udemy.com",
+            "description": "This is a practical course for Forex or Commodity traders who want to learn MQL4 and program their own Forex Robots (aka Expert Advisor for the MetaTrader 4 trading platform).",
+            "date": "January 2021",
+            "path_or_link": "assets/certificates/mql4.pdf"
+        }
+    ],
+    "incomplete": [
+        {
+            "name": "IOS Development",
+            "service": "Team Treehouse",
+            "service_link": "https://teamtreehouse.com",
+            "description": "Swift, UIKit, SwiftUI, Storyboards. Techdegree offered by TeamTreehouse, discontinued in 2018 before acquisition of certification.",
+            "date": "July 2018",
+            "path_or_link": "https://web.archive.org/web/20170428144451/https://teamtreehouse.com/techdegree/ios-development"
+        },
+        {
+            "name": "Docker for Developers",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "Discover how to leverage Docker for application development. Instructor Emmanuel Henri—an executive and full-stack developer with 20 years of experience in programming, technology, and design—walks you through deploying your first Docker app, from base application setup to deploying your app to the cloud.",
+            "date": "current",
+            "path_or_link": "https://www.linkedin.com/learning/docker-for-developers-14493163"
+        },
+        {
+            "name": "Advanced Python Projects: Build AI Applications",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "This course is designed to equip you with the skills and knowledge needed to create a portfolio of Python-based applications and tools that can be showcased to employers or used to bring your own ideas to life. It’s ideal for anyone looking to enhance their Python knowledge by completing hands-on projects or for those seeking to create interesting solutions from scratch for fun.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/advanced-python-projects-build-ai-applications"
+        },
+        {
+            "name": "LLM Foundations: Vector Databases for Caching and Retrieval Augmented Generation (RAG)",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "As large language models grow in popularity, the infrastructure to be used around them also becomes vital to reduce costs, generate accurate responses, and improve efficiency. Vector databases play a vital role in several LLM use cases to help alleviate LLM shortcomings, reduce costs and latency. Knowledge of its basics and applications are vital for any engineer building applications with LLMs, and in this course, Kumaran Ponnambalam teaches you the basics of vector databases and how to use them in LLM caching and retrieval-augmented generation (RAG).",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/llm-foundations-vector-databases-for-caching-and-retrieval-augmented-generation-rag"
+        },
+        {
+            "name": "PyTorch Essential Training: Deep Learning",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "In this course, software developer Terezija Semenski teaches you the important features of PyTorch with a hands-on approach to help you develop the skills you need to dive into your deep learning projects. This course includes Code Challenges powered by CoderPad. Code Challenges are interactive coding exercises with real-time feedback, so you can get hands-on coding practice alongside the course content to advance your programming skills.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/pytorch-essential-training-deep-learning-23753149"
+        },
+        {
+            "name": "Introduction to NLP and LLMs: Principles and Practical Applications",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "In this course, designed uniquely for nontechnical and nonprogramming professionals, instructor Gwendolyn Stripling provides a comprehensive overview of how computers process and understand human language. Explore real-world applications of NLP and LLMs across various industries, from chatbots and virtual assistants to sentiment analysis and content generation.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/introduction-to-nlp-and-llms-principles-and-practical-applications"
+        },
+        {
+            "name": "Applied Machine Learning: Ensemble Learning",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "In this course, instructor Matt Harrison guides you through the key concepts of ensemble learning. Explore different ensemble methods like bagging, boosting, and stacking and learn to implement them using popular Python libraries such as scikit-learn and XGBoost.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/applied-machine-learning-ensemble-learning-25317548"
+        },
+        {
+            "name": "Azure AI for Developers: Building AI Agents",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "Get up to speed with AI agents in Azure AI. This course is designed for IT professionals with a working knowledge of Azure, GitHub, and Python who are looking to build AI agents using Azure OpenAI. Instructor Ziggy Zulueta offers a deep dive into creating agents with Azure OpenAI and Python using different frameworks such as the OpenAI Assistants API, Semantic Kernel, and AutoGen.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/azure-ai-for-developers-building-ai-agents"
+        },
+        {
+            "name": "Generative AI for Business Analysts",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "In this course, learn about the generative AI to business analysts and how it can enhance your work—and navigate your own change curve to adoption. Instructor Vincent Mirabelli also explains the benefits of AI, limitations, and ethical considerations specific to business analysts, along with the available tools and how they can best be used.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/generative-ai-for-business-analysts"
+        },
+        {
+            "name": "AI in Fintech Essential Training",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "Discover how investing with AI works; explore borrowing and lending with online peer-to-peer (P2P) markets; learn how to evaluate the value of cryptocurrencies by building basic financial models with Excel; Learn how to use AI tools like ChatGPT and identify sources of financial data; and more.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/ai-in-fintech-essential-training-24038608"
+        }
+    ]
+}

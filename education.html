@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Marcél Busschers</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+    <style>
+        /* === Shared Styles === */
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --radius: 16px;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--text-color);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* === Education Specific Styles === */
+        .education-container {
+            max-width: 1200px;
+            margin: 100px auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .institute-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .institute-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .institute-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .institute-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .institute-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .institute-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .institute-degree {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .institute-details {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .institute-date {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .institute-description {
+            line-height: 1.8;
+            color: #64748b;
+            white-space: pre-line;
+        }
+
+        /* === Dark Mode === */
+        .dark-mode {
+            --card-bg: #334155;
+            --text-color: #f8fafc;
+            background: var(--dark);
+        }
+
+        .dark-mode .navbar {
+            background: rgba(30, 41, 59, 0.98);
+        }
+
+        .dark-mode .institute-degree,
+        .dark-mode .institute-description {
+            color: #94a3b8;
+        }
+
+        .dark-mode .institute-date {
+            color: var(--accent);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            border: none;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Education Content -->
+    <main class="education-container">
+        <h1>Educational Background</h1>
+        <div class="institute-grid" id="instituteList"></div>
+    </main>
+
+    <!-- Dark Mode Toggle -->
+    <button class="theme-toggle">🌓</button>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const storedTheme = localStorage.getItem('theme');
+
+        if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', 
+                document.body.classList.contains('dark-mode') ? 'dark' : 'light'
+            );
+        });
+
+        // Load Education Data
+        // Modified loadEducationData function
+        async function loadEducationData() {
+            try {
+                const response = await fetch('data/education.json');
+                if (!response.ok) throw new Error('Failed to load data');
+                
+                const data = await response.json();
+                const institutes = data.institutes;
+
+                const instituteGrid = document.getElementById('instituteList');
+                instituteGrid.innerHTML = institutes.map(institute => {
+                    // Extract URL from description if ID is 4
+                    const isSpecialCase = institute.id === 4;
+                    const urlPattern = /https?:\/\/[^\s]+/;
+                    const urlMatch = isSpecialCase ? institute.description.match(urlPattern) : null;
+                    const href = isSpecialCase && urlMatch ? urlMatch[0] : `university-courses.html?institute=${institute.id}`;
+
+                    return `
+                        <a href="${href}" class="institute-card" ${isSpecialCase ? 'target="_blank"' : ''}>
+                            <div class="institute-header">
+                                <img src="${institute.logo}" 
+                                    alt="${institute.name} logo" 
+                                    class="institute-logo">
+                                <div class="institute-info">
+                                    <h3>${institute.name}</h3>
+                                    <p class="institute-degree">${institute.degree}</p>
+                                    <p class="institute-date">${institute.date}</p>
+                                </div>
+                            </div>
+                            <div class="institute-details">
+                                <p class="institute-description">${institute.description.replace(/\\n/g, '<br>')}</p>
+                                <p class="institute-location">📍 ${institute.place}</p>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+
+            } catch (error) {
+                console.error('Error loading education data:', error);
+                document.getElementById('instituteList').innerHTML = `
+                    <div class="error-message">
+                        <h3>Error Loading Education Data</h3>
+                        <p>Please try refreshing the page or check back later.</p>
+                    </div>
+                `;
+            }
+        }
+
+
+        // Initial load
+        loadEducationData();
+    </script>
+</body>
+</html>

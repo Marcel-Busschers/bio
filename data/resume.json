@@ -1,0 +1,148 @@
+{
+    "name": "Marcél Busschers",
+    "nationality": "Dutch, British, South African",
+    "dob": "8 September 1999",
+    "email": "marcel@busschers.uk",
+    "phone": "+31 6 15 42 86 94",
+    "location": "Amsterdam, Netherlands",
+    "about_me": "Born and raised in Cape Town, South Africa; native in English and can speak Dutch at a respectable level. Affinity in Computer Science and Data Science, specialising in Artificial Intelligence and Machine Learning. Can work well independently as well as collaboratively. Additional affinity with researching and reporting.",
+    "areas_of_specialisation": [
+        "A.I.", 
+        "Machine Learning", 
+        "Data Engineering", 
+        "Computer Science", 
+        "Quant Trading"
+    ],
+    "interests": [
+        "Endurance Running", 
+        "Formula 1", 
+        "Gaming", 
+        "IOS Development", 
+        "FX Trading", 
+        "IoT Systems", 
+        "A.I. Technologies"
+    ],
+    "skills": [
+        "Data Science & Analytics", 
+        "Python", 
+        "PyTorch", 
+        "Pandas", 
+        "Machine Learning", 
+        "Git", 
+        "APIs", 
+        "Critical Thinking", 
+        "Financial Knowledge", 
+        "Reports", 
+        "Research", 
+        "Presentations."
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "level": "Native",
+            "proficiency": "Native-like fluency with complete spontaneity"
+        },
+        {
+            "language": "Dutch",
+            "level": "C2",
+            "proficiency": "Mastery"
+        },
+        {
+            "language": "Japanese",
+            "level": "B2",
+            "proficiency": "Professional working proficiency"
+        },
+        {
+            "language": "Spanish",
+            "level": "A2",
+            "proficiency": "Basic conversational skills"
+        }
+    ],
+    "ai_specializations": [
+        {
+            "name": "Reinforcement Learning",
+            "description": "Developing intelligent systems that learn optimal behaviors through environment interaction",
+            "keywords": [
+                "Q-Learning", 
+                "Deep Q-Networks (DQN)",
+                "Policy Gradient Methods",
+                "Multi-Agent Systems",
+                "OpenAI Gym",
+                "Reward Engineering"
+            ]
+        },
+        {
+            "name": "Natural Language Processing",
+            "description": "Designing systems for human language understanding and generation",
+            "keywords": [
+                "BERT & Transformers",
+                "Text Classification",
+                "Named Entity Recognition",
+                "spaCy/NLTK",
+                "Sentiment Analysis",
+                "Question Answering Systems"
+            ]
+        },
+        {
+            "name": "Computer Vision",
+            "description": "Building visual perception systems for image/video analysis",
+            "keywords": [
+                "YOLO/Object Detection",
+                "OpenCV",
+                "Image Segmentation",
+                "CNN Architectures",
+                "Video Analysis",
+                "3D Reconstruction"
+            ]
+        },
+        {
+            "name": "Transformers",
+            "description": "Implementing state-of-the-art attention-based architectures",
+            "keywords": [
+                "Self-Attention Mechanisms",
+                "BERT/GPT Architectures",
+                "Hugging Face",
+                "Multimodal Models",
+                "Efficient Transformers",
+                "Model Distillation"
+            ]
+        },
+        {
+            "name": "Generative Modelling",
+            "description": "Creating synthetic data and artistic content through learned distributions",
+            "keywords": [
+                "GANs & VAEs",
+                "Diffusion Models",
+                "Style Transfer",
+                "Neural Rendering",
+                "Text-to-Image Generation",
+                "3D Asset Creation"
+            ]
+        },
+        {
+            "name": "Time Series Forecasting",
+            "description": "Predicting temporal patterns in complex sequential data",
+            "keywords": [
+                "ARIMA/Prophet",
+                "LSTM Networks",
+                "Anomaly Detection",
+                "Multivariate Analysis",
+                "TensorFlow Probability",
+                "Causal Impact Analysis"
+            ]
+        }
+    ],
+    "programming": [
+        "LaTeX", 
+        "Python", 
+        "Pandas", 
+        "PyTorch", 
+        "Swift", 
+        "Tensorflow", 
+        "C/C++", 
+        "Java"
+    ],
+    "experience": "data/experience.json",
+    "education":  "data/education.json",
+    "projects": "data/projects.json"
+}
