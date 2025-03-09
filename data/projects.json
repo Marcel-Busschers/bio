@@ -5,7 +5,7 @@
             "name": "Watch Any Stream",
             "type": "App",
             "overview": "iOS app that allows user to find a streaming service where a title may be available on, accross hundreds of countries simultaneously.",
-            "description": "This app was created to replicate the functionality of watchany.stream; a website that allows you to find which streaming service a title may be available on, accross hundres of countries. It uses an API from The Movie Database (TMDb) to pull relevant titles such as Trending content, Popular content, and Categorical content. \\n It has certain functionalities to allow for a more user-friendly and familiar design, including the Netflix-like horizontal scrolling, and search functionality. Furthermore, a section where the user can select which streaming services they own to filter out all the irrelivant providers. \\n Upon entering a title, the user is provided with basic information including the title, date of air, description, rating and popularity count. It then provides a selection of providers that this particular title may be available on; the user can then select a provider, which will present the user with a list of countries which can be connected to via any common VPN service. \\n Note: this app is for personal use, and is not published to the App Store.",
+            "description": "This app was created to replicate the functionality of watchany.stream; a website that allows you to find which streaming service a title may be available on, accross hundres of countries. It uses an API from The Movie Database (TMDb) to pull relevant titles such as Trending content, Popular content, and Categorical content. \\n\\n It has certain functionalities to allow for a more user-friendly and familiar design, including the Netflix-like horizontal scrolling, and search functionality. Furthermore, a section where the user can select which streaming services they own to filter out all the irrelivant providers. \\n\\n Upon entering a title, the user is provided with basic information including the title, date of air, description, rating and popularity count. It then provides a selection of providers that this particular title may be available on; the user can then select a provider, which will present the user with a list of countries which can be connected to via any common VPN service. \\n\\n Note: this app is for personal use, and is not published to the App Store.",
             "dependencies": "iOS, xCode, Swift, SwiftUI, APIs, Web Scraping, Concurrency",
             "preview": "assets/photos/watchanystream/splash.png",
             "images": [
@@ -14,6 +14,92 @@
                 "assets/photos/watchanystream/content.png",
                 "assets/photos/watchanystream/provider.png",
                 "assets/photos/watchanystream/provider_selection.png"
+            ],
+            "link": {
+                "name": "Code",
+                "url": "https://github.com/Marcel-Busschers/Watch-Any-Stream"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Reinforcement Learning Trading Bot",
+            "type": "Machine Learning",
+            "overview": "Reinforcement Learning project using PPO to create a Automated Trading Bot. Leverages OpenCV and Matplotlib to visualise environment in GIF format.",
+            "description": "This research developed an autonomous Forex trading agent using deep reinforcement learning, specifically implementing the Proximal Policy Optimization (PPO) algorithm. The model combines an actor-critic architecture with an Epsilon-Greedy Deep Q-Learning approach, where rewards are computed at each step in a custom trading environment. The actor network determines actions (buy/sell/hold) using policy gradients, while the critic evaluates state values via temporal difference learning. Key technical implementations included a discounted reward system with Generalised Advantage Estimation (GAE) to balance bias-variance trade-offs in multi-step returns, and a clipped surrogate objective function to ensure stable policy updates. The model processed OHLC data from 50,000+ hourly Forex instances across EUR/USD, USD/JPY, and other pairs, normalized to 0-1 ranges for neural network compatibility. \\n\\n The implementation leveraged Python with TensorFlow/Keras for neural networks, mplfinance for candlestick visualization, and OpenCV for real-time environment rendering. Data was split 50-50 for training/testing without cross-validation due to time-series constraints, using 720-2160 step windows (1-3 months of hourly data). Training involved two phases: initial 350 episodes with 1e-5 learning rate, then 3000+ episodes at 3e-4 to address early convergence issues. While achieving 2.1-2.8% monthly returns on USD/JPY test data, the naive reward system (profit/loss per step) led to suboptimal holding strategies, evidenced by -0.82% performance on EUR/USD markets. The technical infrastructure included custom environment classes with reset/step/render methods and TensorBoard integration for performance tracking.",
+            "dependencies": "Python, Tensorflow, Tensorboard, Proximal Policy Optimization (PPO), Deep Q-Learning, Generalised Advantage Estimation (GAE), Monte-Carlo, Pandas, Matplotlib, MPL Finance, Open CV",
+            "preview": "assets/photos/rl_bot/environment.png",
+            "images": [
+                "assets/photos/rl_bot/graph.png",
+                "assets/photos/rl_bot/environment.png",
+                "assets/photos/rl_bot/tensorboard_first_training.png",
+                "assets/photos/rl_bot/tensorboard_tuned_training.png"
+            ],
+            "link": {
+                "name": "Report",
+                "url": "assets/reports/rl_bot.pdf"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Transformer Variational Autoencoder",
+            "type": "Machine Learning",
+            "overview": "Thesis level research on the implementation of a Variational Autoencoder using Transformer models built from scratch.",
+            "description": "This thesis explores the application of a Transformer-based Variational Autoencoder (VAE) to financial market data analysis. The core innovation lies in adapting the VAE architecture—traditionally used for image generation—to sequential data by integrating Transformer blocks, which excel at modeling relationships in sequences (e.g., text or time series). The model combines the VAE’s ability to compress data into a probabilistic latent space with the Transformer’s self-attention mechanism, enabling it to capture temporal dependencies in financial time series. The architecture features an encoder with unmasked Transformer blocks (to process full sequences) and a decoder with masked blocks (to prevent future data leakage during reconstruction). Key technical challenges included addressing posterior collapse—a common VAE issue where the decoder ignores latent variables—through techniques like beta annealing, free-bits constraints, and word dropout. \\n\\n The implementation utilized PyTorch for model training, applied to two datasets: textual data from the COCO dataset (for initial validation) and 13 years of EUR/USD forex data. For financial data, the model processed one-dimensional closing prices, with the decoder outputting Gaussian distributions to reconstruct sequences. Training involved optimizing the Evidence Lower Bound (ELBO) loss, balancing KL divergence (measuring encoder distribution alignment) and reconstruction error. The latent space was visualized using t-SNE from scikit-learn, revealing three distinct clusters: sudden price spikes (Cluster 1), stable trends (Cluster 2), and volatile patterns (Cluster 3). These clusters correlated with observable market behaviors, suggesting latent representations could augment technical analysis. \\n\\n The project demonstrated that Transformer VAEs can meaningfully encode financial sequences, though limitations remained. While the model achieved moderate reconstruction fidelity and identified macro-level patterns, its predictive utility required further refinement. The work highlights the potential of hybrid architectures for sequential data analysis, while underscoring the importance of hyperparameter tuning (e.g.,  values for disentanglement) and domain expertise in interpreting latent projections. Code and implementation details are available on the associated GitHub repository, found in the report below.",
+            "dependencies": "Python, PyTorch, Transformer Blocks, Beta-VAE, t-SNE, ELBO Loss, COCO dataset",
+            "preview": "assets/photos/transformer_vae/preview.png",
+            "images": [
+                "assets/photos/transformer_vae/preview.png",
+                "assets/photos/transformer_vae/attention.png",
+                "assets/photos/transformer_vae/diagram.png",
+                "assets/photos/transformer_vae/diagram_detail.png",
+                "assets/photos/transformer_vae/latent.png",
+                "assets/photos/transformer_vae/mask.png"
+            ],
+            "link": {
+                "name": "Report",
+                "url": "assets/reports/transformer_vae.pdf"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Evaluating Romantic Partner Closeness Through Collaborative Gameplay in Overcooked! 2",
+            "type": "Social Signal Processing",
+            "overview": "This study investigated whether playing Overcooked! 2 influences interpersonal closeness in romantic couples, combining IOS scale surveys, in-game behavior annotation, and performance analysis. Results revealed no significant changes in closeness but highlighted collaboration’s role in gameplay success.",
+            "description": "This study was conducted to explore how playing the collaborative video game Overcooked! 2 impacts perceived interpersonal closeness in romantic partners. Using a mixed-methods approach, you recruited 18 participants (nine couples) to play three rounds of the game, measuring closeness via the Inclusion of Other in Self (IOS) scale before and after gameplay. In-game behavior was annotated using a modified taxonomy of “productive” and “unproductive” actions (e.g., ingredient preparation vs. food waste) to assess collaboration. Performance metrics (game scores) and survey data were analyzed for correlations between pre-existing closeness, collaborative behavior, and outcomes. \\n\\n The experiment relied on Overcooked! 2 as the collaborative gaming environment, with gameplay recorded via a capture card for later annotation. Data collection involved pre- and post-game questionnaires (digital forms) to gather demographic details and IOS scores. Annotation of in-game actions was performed manually using spreadsheets, guided by an adapted taxonomy from Bishop et al. (2020). Statistical analysis (mediation models) was conducted to explore relationships between variables, with ethical oversight from the TU Delft Human Research Ethics Committee (HREC). \\n\\n While no significant change in perceived closeness was observed post-gameplay, collaborative in-game actions (e.g., ingredient preparation, dish serving) positively correlated with performance scores. The study highlighted limitations in using the IOS scale for short-term interventions and underscored the need for larger samples and refined behavioral taxonomies.",
+            "dependencies": "Overcooked! 2, Inclusion of Other in Self (IOS) scale, Behavioral annotation taxonomy, Capture card (gameplay recording), Mediation analysis (statistical modeling), ethics approval, Spreadsheet-based annotation, Likert-scale surveys, Dyadic collaboration metrics",
+            "preview": "assets/photos/overcooked/preview.png",
+            "images": [
+                "assets/photos/overcooked/preview.png",
+                "assets/photos/overcooked/instructions.png",
+                "assets/photos/overcooked/relationship_diagram.png",
+                "assets/photos/overcooked/ios_scale.png",
+                "assets/photos/overcooked/experimental_approach.png",
+                "assets/photos/overcooked/ios_scale.png",
+                "assets/photos/overcooked/participants_survey.png"
+            ],
+            "link": {
+                "name": "Report",
+                "url": "assets/reports/overcooked.pdf"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Co-Speech Gesture Synthesis via Adaptive GANs for Furhat Robotics",
+            "type": "Coversational Agents",
+            "overview": "This project developed a GAN-based model with adaptive sampling and cross-modal attention to generate realistic upper-body gestures synchronized with speech, addressing the trade-off between distribution coverage and precision for Furhat Robotics agents.",
+            "description": "This project developed a GAN-based model with adaptive sampling and cross-modal attention to generate realistic upper-body gestures synchronized with speech, addressing the trade-off between distribution coverage and precision for Furhat Robotics agents. \\n\\n The solution combines acoustic and textual inputs through a multi-modal architecture. A Temporal Convolutional Network (TCN) processes audio features, while a BERT encoder handles text tokens. These modalities are fused via cross-modal attention to align gestures with subword-level speech elements. The generator uses a U-Net decoder with a mixture model to prevent mode collapse, dynamically blending outputs from sub-generators. Training incorporates adversarial loss, reconstruction loss, and a novel Adaptive Importance Sampled Learning (AISLe) method to prioritize underrepresented data bins, improving coverage of rare gesture-speech pairs without sacrificing precision. \\n\\n The model leverages the extended PATS dataset (250+ hours of video), with poses extracted via OpenPose and transcripts aligned using Google ASR, despite a 29% word error rate. Key components include a BERT-based text encoder, TCN audio encoder, and a discriminator using a Temporal Convolutional Network. AISLe reweights loss dynamically during training by estimating data density ratios from discriminator outputs, eliminating extra computational costs. \\n\\n Evaluation against Speech2Gesture and Gesticulator showed superior performance: 38.9 Expressivity and 37.1 Relevance scores in human studies (AMT), and quantifiable gains like 27.8 FID (vs. 68.1 for S2G) and 0.317 F1 precision. Ablation studies confirmed AISLe’s critical role in coverage (27% FID improvement over static rebalancing) and cross-modal attention’s impact on timing accuracy. Challenges included noisy transcript data and balancing precision-coverage trade-offs, but the architecture’s design enabled robust gesture generation for embodied agents.",
+            "dependencies": "GANs, Adaptive Importance Sampling (AISLe), BERT, Temporal Convolutional Networks (TCN), U-Net, OpenPose, Google ASR, PATS Dataset, Cross-Modal Attention, Furhat Robotics",
+            "preview": "assets/photos/furhat/preview.png",
+            "images": [
+                "assets/photos/furhat/preview.png",
+                "assets/photos/furhat/diagram.png",
+                "assets/photos/furhat/pose.png",
+                "assets/photos/furhat/architecture.png",
+                "assets/photos/furhat/custom_decoder.png",
+                "assets/photos/furhat/aisle.png",
+                "assets/photos/furhat/loss.png",
+                "assets/photos/furhat/weight_factor.png",
+                "assets/photos/furhat/results.png"
             ]
         }
     ]

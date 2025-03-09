@@ -150,6 +150,34 @@
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
         }
+
+        /* === Project Link Button === */
+        .project-link-container {
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .project-link {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Dark mode adjustment */
+        .dark-mode .project-link {
+            background: var(--secondary);
+        }
     </style>
 </head>
 <body>
@@ -180,6 +208,8 @@
             <h2>Technologies Used</h2>
             <div class="dependencies-list" id="dependencies"></div>
         </div>
+
+        <div class="project-link-container" id="projectLink"></div>
     </main>
 
     <!-- Dark Mode Toggle -->
@@ -240,6 +270,20 @@
                 dependencies.innerHTML = project.dependencies.split(', ')
                     .map(dep => `<span class="dependency-tag">${dep.trim()}</span>`)
                     .join('');
+
+                // Set project link
+                const linkContainer = document.getElementById('projectLink');
+                if (project.link && project.link.url) {
+                    linkContainer.innerHTML = `
+                        <a href="${project.link.url}" 
+                        class="project-link" 
+                        target="_blank">
+                        ${project.link.name}
+                        </a>
+                    `;
+                } else {
+                    linkContainer.style.display = 'none';
+                }
 
             } catch (error) {
                 console.error('Error loading project:', error);
