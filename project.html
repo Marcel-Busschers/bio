@@ -94,6 +94,10 @@
             max-height: 600px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            width: 100vw;         /* Full viewport width */
+            height: auto;         /* Maintain aspect ratio */
+            max-width: 100%;      /* Prevent horizontal overflow */
+            object-fit: contain;  /* Ensure full image visibility */
         }
 
         .project-description {
