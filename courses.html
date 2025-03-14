@@ -166,6 +166,37 @@
             color: #94a3b8;
         }
 
+        /* === Sorting Header === */
+        .courses-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .sort-button {
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .sort-button:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        /* Dark mode adjustment */
+        .dark-mode .sort-button {
+            background: var(--secondary);
+        }
+
     </style>
 </head>
 <body>
@@ -182,7 +213,12 @@
 
     <!-- Courses Content -->
     <main class="courses-container">
-        <h1>Professional Development Courses</h1>
+        <div class="courses-header">
+            <h1>Professional Development Courses</h1>
+            <button id="sortButton" class="sort-button">
+                Sort <span id="sortIcon">↑</span>
+            </button>
+        </div>
         <div class="course-grid" id="courseList"></div>
     </main>
 
@@ -213,53 +249,91 @@
             );
         });
 
-      // Load Course Data
-      async function loadCourses() {
-          try {
-              const response = await fetch('data/online_courses.json');
-              if (!response.ok) throw new Error('Failed to load data');
+        // Load Course Data
+        let isAscending = true;
+        let coursesData = null;
 
-              const data = await response.json();
-              let courses = [];
+        async function loadCourses() {
+            try {
+                const response = await fetch('data/online_courses.json');
+                if (!response.ok) throw new Error('Failed to load data');
+                
+                coursesData = await response.json();
+                applySortAndFilter();
+                
+            } catch (error) {
+                console.error('Error loading courses:', error);
+                document.getElementById('courseList').innerHTML = `
+                    <div class="error-message">
+                        <h3>Error Loading Courses</h3>
+                        <p>Please try refreshing the page or check back later.</p>
+                    </div>
+                `;
+            }
+        }
 
-              switch (data.show.toLowerCase()) {
-                  case 'all':
-                      courses = [...data.complete, ...data.incomplete];
-                      break;
+        function applySortAndFilter() {
+            let courses = [];
+            switch(coursesData.show.toLowerCase()) {
+                case 'all': courses = [...coursesData.complete, ...coursesData.incomplete]; break;
+                case 'complete': courses = coursesData.complete; break;
+                case 'incomplete': courses = coursesData.incomplete; break;
+            }
 
-                  case 'complete':
-                      courses = data.complete; // Only completed
-                      break;
+            // Separate TBD courses
+            const tbdCourses = courses.filter(c => c.date.toLowerCase() === 'tbd');
+            const sortableCourses = courses.filter(c => c.date.toLowerCase() !== 'tbd');
 
-                  case 'incomplete':
-                      courses = data.incomplete; // Only incomplete
-                      break;
+            sortableCourses.sort((a, b) => {
+                const aDate = getDateValue(a.date);
+                const bDate = getDateValue(b.date);
+                return isAscending ? aDate - bDate : bDate - aDate;
+            });
 
-                  default:
-                      console.error('Invalid "show" value in JSON:', data.show);
-              }
+            // Always put TBD at the end
+            const sortedCourses = [...sortableCourses, ...tbdCourses];
+            renderCourses(sortedCourses);
+        }
 
-              const courseGrid = document.getElementById('courseList');
-              courseGrid.innerHTML = courses.map(course => `
-                  <a href="${course.path_or_link}" target="_blank" class="course-card">
-                      <h2 class="course-title">${course.name}</h2>
-                      <p class="course-service">Via ${course.service}</p>
-                      <p class="course-description">${course.description}</p>
-                  </a>
-              `).join('');
-          } catch (error) {
-              console.error('Error loading courses:', error);
-              document.getElementById('courseList').innerHTML = `
-                  <div class="error-message">
-                      <h3>Error Loading Courses</h3>
-                      <p>Please try refreshing the page or check back later.</p>
-                  </div>
-              `;
-          }
-      }
+        function getDateValue(dateString) {
+            const lowerDate = dateString.toLowerCase();
+            if (lowerDate === 'current') return Infinity;
+            
+            const [month, year] = dateString.split(' ');
+            const months = ['january','february','march','april','may','june',
+                            'july','august','september','october','november','december'];
+            const monthIndex = months.indexOf(month.toLowerCase());
+            return new Date(year, monthIndex).getTime();
+        }
 
-      // Initial load
-      loadCourses();
+        function renderCourses(courses) {
+            const courseGrid = document.getElementById('courseList');
+            courseGrid.innerHTML = courses.map(course => `
+                <a href="${course.path_or_link}" target="_blank" class="course-card">
+                    <h2 class="course-title">${course.name}</h2>
+                    <p class="course-service">Via ${course.service}</p>
+                    <p class="course-date">${formatDateDisplay(course.date)}</p>
+                    <p class="course-description">${course.description}</p>
+                </a>
+            `).join('');
+        }
+
+        function formatDateDisplay(dateString) {
+            const lowerDate = dateString.toLowerCase();
+            if (lowerDate === 'current') return '🟢 Currently Learning';
+            if (lowerDate === 'tbd') return '🟡 Planned for Future';
+            return `📅 ${dateString}`;
+        }
+
+        // Sort button click handler
+        document.getElementById('sortButton').addEventListener('click', () => {
+            isAscending = !isAscending;
+            document.getElementById('sortIcon').textContent = isAscending ? '↑' : '↓';
+            applySortAndFilter();
+        });
+
+        // Initial load
+        loadCourses();
     </script>
 </body>
 </html>
