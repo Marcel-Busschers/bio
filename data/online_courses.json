@@ -40,6 +40,14 @@
             "description": "Swift, UIKit, SwiftUI, Storyboards. Techdegree offered by TeamTreehouse, discontinued in 2018 before acquisition of certification.",
             "date": "July 2018",
             "path_or_link": "https://web.archive.org/web/20170428144451/https://teamtreehouse.com/techdegree/ios-development"
+        },
+        {
+            "name": "Applied Machine Learning: Ensemble Learning",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "In this course, instructor Matt Harrison guides you through the key concepts of ensemble learning. Explore different ensemble methods like bagging, boosting, and stacking and learn to implement them using popular Python libraries such as scikit-learn and XGBoost.",
+            "date": "April 2025",
+            "path_or_link": "assets/certificates/ml-ensemble-learning.pdf"
         }
     ],
     "incomplete": [
@@ -58,14 +66,6 @@
             "description": "In this course, software developer Terezija Semenski teaches you the important features of PyTorch with a hands-on approach to help you develop the skills you need to dive into your deep learning projects. This course includes Code Challenges powered by CoderPad. Code Challenges are interactive coding exercises with real-time feedback, so you can get hands-on coding practice alongside the course content to advance your programming skills.",
             "date": "tbd",
             "path_or_link": "https://www.linkedin.com/learning/pytorch-essential-training-deep-learning-23753149"
-        },
-        {
-            "name": "Applied Machine Learning: Ensemble Learning",
-            "service": "LinkedIn Learning",
-            "service_link": "https://www.linkedin.com/learning/",
-            "description": "In this course, instructor Matt Harrison guides you through the key concepts of ensemble learning. Explore different ensemble methods like bagging, boosting, and stacking and learn to implement them using popular Python libraries such as scikit-learn and XGBoost.",
-            "date": "current",
-            "path_or_link": "https://www.linkedin.com/learning/applied-machine-learning-ensemble-learning-25317548"
         },
         {
             "name": "Azure AI for Developers: Building AI Agents",
@@ -122,6 +122,38 @@
             "description": "In this course, Noah Gift prepares you for the certification, starting with an overview of the exam—including the format of the exam, the time it should take, and how and where you can take the exam. Noah then dives into the six sections of the exam, covering what you need to know about: architecting low-code ML solutions",
             "date": "tbd",
             "path_or_link": "https://www.linkedin.com/learning/google-cloud-professional-machine-learning-engineer-cert-prep"
+        },
+        {
+            "name": "Advanced NLP with Python for Machine Learning",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "This course is for anyone who wants to learn more advanced NLP methods. Instructor Gwendolyn Stripling, PhD, begins with a look at the fundamental concepts and principles of NLP, including the evolution and significance of natural language processing. She then reviews some NLP and Python basics—and introduces the NLP library spaCy—before jumping into more modern techniques and advancements in natural language processing using Transformer Models like GPT and BERT.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/advanced-nlp-with-python-for-machine-learning-24079681"
+        },
+        {
+            "name": "Full-Stack Deep Learning with Python",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "After a review of full stack deep learning, MLOps, and MLflow, dive into setting up your environment on Google Colab and running MLflow. Learn how to load and explore a dataset, as well as how to log metrics, parameters, and artifacts. Explore model training, evaluation, and hyperparameter tuning. Plus, go over model deployment and predictions.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/full-stack-deep-learning-with-python"
+        },
+        {
+            "name": "Fine-Tuning for LLMs: from Beginner to Advanced",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "Delve into prompt engineering and learn how to craft effective prompts that guide LLM outputs for specific tasks. Then deep dive into transfer learning and PEFT fine-tuning using LoRA and find out how to adapt and optimize LLMs for varied NLP tasks. Each course section comprises live-action clips, slides, and demos, as well as real-world challenges covering prompt engineering, transfer learning, and fine-tuning techniques to enhance FLAN-T5's capabilities. Plus, you’ll complete a final project focused on building an NLP solution encompassing sentiment analysis, text summarization, and question answering.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/fine-tuning-for-llms-from-beginner-to-advanced"
+        },
+        {
+            "name": "Essentials of MLOps with Azure: 1 Introduction",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "MLOps is the application of software engineering/DevOps principles to the development of machine learning applications. In this course, MLOps expert Noah Gift explains the essentials of MLOps with Azure and shows you how to get started with Spark for MLOps. Nick goes over several important essentials of MLOps with Azure ahd shows you how to get started with Spark for MLOps. He covers Spark Databricks clusters and notebooks, as well as how to use data with Databricks Spark. Nick demonstrates how to get started with PySpark and how to add users, import and create notebooks, facilitate collaborative projects, and invite others to the team. Plus, he explores the need for MLOps, how to get started using it, the major platforms MLOps operates on, and more.",
+            "date": "tbd",
+            "path_or_link": "https://www.linkedin.com/learning/essentials-of-mlops-with-azure-1-introduction"
         }
     ]
 }
