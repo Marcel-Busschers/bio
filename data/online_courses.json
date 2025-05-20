@@ -48,6 +48,14 @@
             "description": "In this course, instructor Matt Harrison guides you through the key concepts of ensemble learning. Explore different ensemble methods like bagging, boosting, and stacking and learn to implement them using popular Python libraries such as scikit-learn and XGBoost.",
             "date": "April 2025",
             "path_or_link": "assets/certificates/ml-ensemble-learning.pdf"
+        },
+        {
+            "name": "C++ Programming Professional Certificate by OpenEDG C++ Institute",
+            "service": "LinkedIn Learning",
+            "service_link": "https://www.linkedin.com/learning/",
+            "description": "C++ Institute is renowned for its performance, control, and versatility. Ready to get started? Begin by mastering the fundamentals and then progress to proven techniques for writing well-organized, efficient code. By the end, you'll have the knowledge you need to create your own C++ programs and applications. Tune in, pass the final exam, and earn your professional certificate.",
+            "date": "May 2025",
+            "path_or_link": "assets/certificates/cplusplus.pdf"
         }
     ],
     "incomplete": [
